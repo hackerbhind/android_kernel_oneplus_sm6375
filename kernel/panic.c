@@ -225,11 +225,6 @@ void panic(const char *fmt, ...)
 	panic_flush_device_cache(2000);
 #endif
 	pr_emerg("Kernel panic - not syncing: %s\n", buf);
-#ifdef CONFIG_OPLUS_FEATURE_DUMP_REASON
-	function_name = parse_function_builtin_return_address((unsigned long)__builtin_return_address(0));
-	if (function_name)
-		save_dump_reason_to_smem(buf, function_name);
-#endif /*CONFIG_OPLUS_FEATURE_DUMP_REASON*/
 
 #ifdef CONFIG_DEBUG_BUGVERBOSE
 	/*

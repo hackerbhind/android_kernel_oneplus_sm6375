@@ -121,4 +121,3 @@ obj-$(CONFIG_PHYSICAL_ANTI_FRAGMENTATION) += multi_freearea.o
 obj-$(CONFIG_KSHRINK_LRUVECD) += kshrink_lruvecd.o
 obj-$(CONFIG_KSHRINK_SLABD) += kshrink_slabd.o
 obj-$(CONFIG_MAPPED_PROTECT) += mapped_protect.o
-obj-y += mm_osvelte/

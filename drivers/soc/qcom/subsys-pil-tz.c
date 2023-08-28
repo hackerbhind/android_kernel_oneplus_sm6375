@@ -840,26 +840,6 @@ static void log_failure_reason(const struct pil_tz_data *d)
 	}
 	#endif
 
-	#if defined(OPLUS_FEATURE_MODEM_MINIDUMP) && defined(CONFIG_OPLUS_FEATURE_MODEM_MINIDUMP)
-	if (!strncmp(name, "modem", 5)) {
-		mdmreason_set(reason);
-
-		pr_err("oplus debug modem subsystem failure reason: %s.\n", reason);
-
-		if (strstr(reason, "OPLUS_MODEM_NO_RAMDUMP_EXPECTED") || strstr(reason, "oplusmsg:go_to_error_fatal")) {
-			pr_err("%s will subsys reset", __func__);
-			SKIP_GENERATE_RAMDUMP = true;
-		}
-
-		pr_err("[crash_log]: %s to schedule crash work1!\n", name);
-		subsystem_schedule_crash_uevent_work(d->dev, name, reason);
-	}
-
-	if (!strncmp(name, "adsp", 4)) {
-		pr_err("[crash_log]: %s to schedule crash work2!\n", name);
-		subsystem_schedule_crash_uevent_work(d->dev, name, reason);
-	}
-	#endif
 }
 
 static int subsys_shutdown(const struct subsys_desc *subsys, bool force_stop)
