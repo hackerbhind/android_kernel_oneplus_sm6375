@@ -4,18 +4,11 @@
 obj-y 	+= platform.o
 obj-$(CONFIG_OPLUS_FEATURE_FEEDBACK) 	+= feedback/
 obj-$(CONFIG_OPLUS_FEATURE_OPROJECT) 	+= oplus_project/
-obj-$(CONFIG_OPLUS_FEATURE_QCOM_MINIDUMP_ENHANCE) 	+= qcom_minidump/
-obj-$(CONFIG_OPLUS_FEATURE_PMIC_MONITOR)     += oplus_pmic_monitor/
-obj-$(CONFIG_OPLUS_FEATURE_DUMP_DEVICE_INFO)	+=  dump_device_info/
 obj-$(CONFIG_OPLUS_FEATURE_CMDLINE)     += cmdline_parser/
 
 ifdef CONFIG_OPLUS_SYSTEM_KERNEL_QCOM
 obj-$(CONFIG_OPLUS_FEATURE_PROJECTINFO)	+=  project_info/
 endif
-
-#ifdef OPLUS_FEATURE_QCOM_PMICWD
-obj-$(CONFIG_OPLUS_FEATURE_QCOM_PMICWD)     += qcom_pmicwd/
-#endif /* OPLUS_FEATURE_QCOM_PMICWD */
 
 #ifdef OPLUS_FEATURE_MM_FEEDBACK
 obj-$(CONFIG_OPLUS_FEATURE_MM_FEEDBACK)         += oplus_mm_fb/
@@ -24,6 +17,3 @@ obj-$(CONFIG_OPLUS_FEATURE_MM_FEEDBACK)         += oplus_mm_fb/
 #ifdef OPLUS_FEATURE_ACM
 obj-$(CONFIG_OPLUS_FEATURE_ACM)     += acm/
 #endif /* OPLUS_FEATURE_ACM */
-#ifdef OPLUS_FEATURE_THEIA
-obj-$(CONFIG_OPLUS_FEATURE_THEIA)     += theia/
-#endif /* OPLUS_FEATURE_THEIA */

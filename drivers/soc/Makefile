@@ -41,27 +41,11 @@ obj-$(CONFIG_OPLUS_DEVICE_IFNO)  +=  oplus/device_info/
 obj-$(CONFIG_OPLUS_FEATURE_SENSOR_CFG) += oplus/sensor/
 #endif
 
-#ifdef CONFIG_OPLUS_SENSOR_CONSUMER_IR
-# Add for consumer ir
-obj-$(CONFIG_OPLUS_SENSOR_CONSUMER_IR_CORE) += oplus/oplus_consumer_ir/
-#endif /* CONFIG_OPLUS_SENSOR_CONSUMER_IR */
-
 #ifdef OPLUS_FEATURE_HEALTHINFO
 obj-$(CONFIG_OPLUS_HEALTHINFO)    +=  oplus/healthinfo/
 #endif /* OPLUS_FEATURE_HEALTHINFO */
 #ifdef OPLUS_FEATURE_MEMLEAK_DETECT
 
-#ifdef OPLUS_FEATURE_CPUFREQ_BOUNCING
-obj-$(CONFIG_OPLUS_FEATURE_CPUFREQ_BOUNCING) += oplus/cpufreq_bouncing/
-#endif
-
 #ifdef OPLUS_FEATURE_TPD
 obj-$(CONFIG_OPLUS_FEATURE_TPD) += oplus/tpd/
 #endif
-
-#Add for NandSwap
-obj-$(CONFIG_NANDSWAP)		+= oplus/oplus_nandswap/
-
-#ifdef OPLUS_FEATURE_GAME_OPT
-obj-$(CONFIG_OPLUS_FEATURE_GAME_OPT) += oplus/game_opt/
-#endif /* OPLUS_FEATURE_GAME_OPT */
