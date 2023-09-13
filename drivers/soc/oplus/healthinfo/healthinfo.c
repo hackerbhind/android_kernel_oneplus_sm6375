@@ -198,11 +198,6 @@ void ohm_schedstats_record(int sched_type, struct task_struct *task, u64 delta_m
                 ohm_action_trig(sched_type);
         }
     }
-#ifdef OPLUS_FEATURE_SCHED_ASSIST
-	if (test_task_ux(task)){
-        ohm_sched_stat_record_common(sched_stat, &sched_stat->ux, delta_ms);
-    }
-#endif
 	if (unlikely(delta_ms >= sched_stat->low_thresh_ms)) {
 		index = (u32)atomic_inc_return(&sched_stat->lwr_index);
 		plwr = &sched_stat->last_n_lwr[index & LWR_MASK];

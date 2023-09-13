@@ -40,12 +40,3 @@ obj-$(CONFIG_OPLUS_DEVICE_IFNO)  +=  oplus/device_info/
 #ifdef OPLUS_FEATURE_SENSOR_SMEM
 obj-$(CONFIG_OPLUS_FEATURE_SENSOR_CFG) += oplus/sensor/
 #endif
-
-#ifdef OPLUS_FEATURE_HEALTHINFO
-obj-$(CONFIG_OPLUS_HEALTHINFO)    +=  oplus/healthinfo/
-#endif /* OPLUS_FEATURE_HEALTHINFO */
-#ifdef OPLUS_FEATURE_MEMLEAK_DETECT
-
-#ifdef OPLUS_FEATURE_TPD
-obj-$(CONFIG_OPLUS_FEATURE_TPD) += oplus/tpd/
-#endif

@@ -30,11 +30,5 @@ source "drivers/soc/oplus/system/Kconfig"
 source "drivers/soc/oplus/sensor/Kconfig"
 #endif /* OPLUS_FEATURE_SENSOR_SMEM */
 
-#ifdef OPLUS_FEATURE_HEALTHINFO
-source "drivers/soc/oplus/healthinfo/Kconfig"
-#endif /* OPLUS_FEATURE_HEALTHINFO */
 endmenu
 
-#ifdef OPLUS_FEATURE_TPD
-source "drivers/soc/oplus/tpd/Kconfig"
-#endif

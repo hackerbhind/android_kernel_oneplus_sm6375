@@ -1756,15 +1756,6 @@ static struct ctl_table kern_table[] = {
 	},
 #endif
 #endif /* OPLUS_FEATURE_TASK_CPUSTATS */
-#if defined(OPLUS_FEATURE_SCHED_ASSIST) && defined(CONFIG_MMAP_LOCK_OPT)
-	{
-		.procname	= "uxchain_v2",
-		.data		= &sysctl_uxchain_v2,
-		.maxlen		= sizeof(int),
-		.mode		= 0666,
-		.proc_handler	= proc_dointvec,
-	},
-#endif
 
 	{ }
 };
